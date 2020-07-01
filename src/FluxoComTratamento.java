@@ -4,7 +4,7 @@ public class FluxoComTratamento {
 		System.out.println("Entrando do main");
 		try {
 			metodo1();
-		}catch (ArithmeticException | NullPointerException | MinhaException ex) {			
+		}catch (Exception ex) {			
 			System.out.println("Exception" + ex.getMessage());
 			ex.printStackTrace();
 		}
@@ -19,10 +19,10 @@ public class FluxoComTratamento {
 	
 	public static void metodo2() {
 		System.out.println("Entrando do metodo2");
-		//ArithmeticException ex = new ArithmeticException("Erro!");
+		//ArithmeticException ex = new ArithmeticException("Erro de tratamento ArithmeticException!");
 		//throw ex;	
 		//throw new ArithmeticException("Erro!");
-		throw new MinhaException("Erro!");
+		throw new NullPointerException("Erro de tratamento NullPointerException!");
 		//System.out.println("Saindo do metodo2");
 	}
 }
